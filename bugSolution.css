@@ -1,0 +1,16 @@
+The issue is resolved by either increasing the specificity of the `#special` selector or by removing conflicting rules.
+
+Here's a corrected version in `bugSolution.css`:
+
+```css
+/* Solution 1: Increase specificity of #special */
+#special { background-color: blue !important; }
+.blue { background-color: green; }
+* { background-color: red; }
+
+/* Solution 2: Remove the universal selector */
+/*.blue { background-color: green; }*/
+#special { background-color: blue; }
+```
+
+By using `!important` (Solution 1), we enforce the blue background for `#special`. Alternatively (Solution 2), removing the universal selector eliminates the conflict.

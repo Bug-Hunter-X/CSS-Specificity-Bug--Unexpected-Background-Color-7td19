@@ -1,0 +1,7 @@
+The following CSS code snippet demonstrates an uncommon error related to the specificity of CSS selectors.  The intended behavior is for the `#special` element to have a blue background, but the specificity rules conflict with the class selector `.blue` and the universal selector `*`. 
+
+```css
+* { background-color: red; }
+.blue { background-color: green; }
+#special { background-color: blue; }
+```
